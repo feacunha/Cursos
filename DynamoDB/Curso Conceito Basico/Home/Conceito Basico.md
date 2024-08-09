@@ -1,17 +1,21 @@
 
 Referência: 
 <br>
-[DynamoDB](https://www.youtube.com/watch?v=kSnpuKr3Ajw  "title"   )
+[DynamoDB](https://www.youtube.com/watch?v=kSnpuKr3Ajw  "DynamoDB"   )
 <br>
-[Como modelar com DynamoDB](https://www.youtube.com/watch?v=bTLoK2eHwi4  "title"   )
+[Como modelar com DynamoDB](https://www.youtube.com/watch?v=bTLoK2eHwi4  "Como modelar com DynamoDB"   )
 
 MarkDown:
 <br>
-[Dicas Markdown](https://docs.github.com/pt/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks  "title"   )
+[Dicas Markdown](https://docs.github.com/pt/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks  "Dicas Markdown"   )
 <br>
-[Guia básico de Markdown](https://docs.pipz.com/central-de-ajuda/learning-center/guia-basico-de-markdown#open  "title"   )
+[Guia básico de Markdown](https://docs.pipz.com/central-de-ajuda/learning-center/guia-basico-de-markdown#open  "Guia básico de Markdown"   )
+<br>
+[Using Markdown and Liquid in GitHub Docs](https://docs.github.com/en/contributing/writing-for-github-docs/using-markdown-and-liquid-in-github-docs)
 
 
+1. Under your repository name, click **Actions**.
+1. This is the next item.
 
 ----
 
@@ -29,13 +33,16 @@ MarkDown:
 
 * ìndices Secundários: Permite consultar os dados na tabela usando uma chave alternativa, além de consultas com base na chave primária.
 
--Chave Primária: Pode ser chave primária simples, de um atributo, ou uma chave composta por dois atributos.
+* Chave Primária: Pode ser chave primária simples, de um atributo, ou uma chave composta por dois atributos.
 
--*As tabelas do DynamoDB pode ou não ter schemas.
--*As tabelas podem ter atributos distintos, por isso não é chamado de coluna.
+* As tabelas do DynamoDB pode ou não ter schemas.
+
+* As tabelas podem ter atributos distintos, por isso não é chamado de coluna.
 
 
-Quando Usar?
+[!NOTE] Keep this in mind.
+
+[!NOTE] Quando Usar?
 
 Muitos dados e Baixa Latência.
 
