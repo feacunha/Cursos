@@ -45,9 +45,8 @@ MarkDown:
 
 ----
 <br>
-> Quando Usar?
-<br>
 
+> Quando Usar?
 * Muitos dados e Baixa Latência.
 
 > Clientes que usam
