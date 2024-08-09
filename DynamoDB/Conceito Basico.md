@@ -66,7 +66,9 @@ EX: Modelagem de um sistema pequeno:
 
 <img src="/DynamoDB/">
 
-![foo bar](/DynamoDB/Modelagem%20de%20um%20sistema%20pequeno.png  "title"   )
+![foo bar](/DynamoDB/Imagens/Modelagem%20de%20um%20sistema%20pequeno.png  "title"   )
+
+
 
 Modelagem: ERD > Padrões de acesso > Design
 
@@ -83,11 +85,11 @@ Padrões de Acesso:
 
 Verificar imagem com o exemplo da tabela.
 
-![foo bar](/DynamoDB/Buscar%20pedidos%20de%20um%20usuário.png  "title"   )
+![foo bar](/DynamoDB/Imagens/Buscar%20perfil%20de%20um%20usuário.png  "title"   )
 
 2- Buscar pedidos de um usuário.
 
-![foo bar](/DynamoDB/Buscar%20pedidos%20de%20um%20usuário.png  "title"   )
+![foo bar](/DynamoDB/Imagens/Buscar%20pedidos%20de%20um%20usuário.png  "title"   )
 
 Como fazer essa pesquisa?
 
@@ -105,7 +107,9 @@ Porque os atributos podem variar na Primary Key e Sort Key, então não faz sent
 
 3 - Buscar um pedido e seus itens.
 
-![foo bar](/DynamoDB/Buscar%20um%20pedido%20e%20seus%20itens.png  "title"   )
+![foo bar](/DynamoDB/Imagens/Buscar%20um%20pedido%20e%20seus%20itens.png  "title"   )
+
+
 
 Como fazer essa consulta?
 
