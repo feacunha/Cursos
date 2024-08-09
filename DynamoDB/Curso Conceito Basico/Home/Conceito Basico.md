@@ -12,84 +12,82 @@ MarkDown:
 [Guia básico de Markdown](https://docs.pipz.com/central-de-ajuda/learning-center/guia-basico-de-markdown#open  "Guia básico de Markdown"   )
 <br>
 [Using Markdown and Liquid in GitHub Docs](https://docs.github.com/en/contributing/writing-for-github-docs/using-markdown-and-liquid-in-github-docs)
+<br>
+[An overview of Markdown, how it works, and what you can do with it.](https://www.markdownguide.org/getting-started/)
+<br>
+[Markdown Monster Documentation](https://markdownmonster.west-wind.com/docs/)
+<br>
+[Sintaxe básica de gravação e formatação no GitHub](https://docs.github.com/pt/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+<br>
+[Organizando informações com seções recolhidas](https://docs.github.com/pt/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-collapsed-sections)
 
-
-1. Under your repository name, click **Actions**.
-1. This is the next item.
 
 ----
 
 # DinamoDB - Not only SQL (NOSQL)
 
 
+* Tabelas como em outros banco de dados
 
-* Tabelas: Como em outros banco de dados
+* Itens cada tabela contém zero ou mais itens. Um item é um grupo de atributos identificável exclusivamente entre todos os itens.
 
-* Itens: Cada tabela contém zero ou mais itens. Um item é um grupo de atributos identificável exclusivamente entre todos os itens.
+* Atributos cada item é composto de um ou mais atributos. Um atributo é um elemento de dados fundamental, algo que não precisa ser dividido. São similares a colunas em banco de  dados relacionais.
 
-* Atributos: cada item é composto de um ou mais atributos. Um atributo é um elemento de dados fundamental, algo que não precisa ser dividido. São similares a colunas em banco de  dados relacionais.
+* Atributos Aninhados O DynamoDB oferece suporte a atributos aninhados até 32 níveis de profundidade.
 
-* Atributos Aninhados: O DynamoDB oferece suporte a atributos aninhados até 32 níveis de profundidade.
+* ìndices Secundários Permite consultar os dados na tabela usando uma chave alternativa, além de consultas com base na chave primária.
 
-* ìndices Secundários: Permite consultar os dados na tabela usando uma chave alternativa, além de consultas com base na chave primária.
-
-* Chave Primária: Pode ser chave primária simples, de um atributo, ou uma chave composta por dois atributos.
+* Chave Primária Pode ser chave primária simples, de um atributo, ou uma chave composta por dois atributos.
 
 * As tabelas do DynamoDB pode ou não ter schemas.
 
 * As tabelas podem ter atributos distintos, por isso não é chamado de coluna.
 
+----
+<br>
+> Quando Usar?
+<br>
 
-[!NOTE] Keep this in mind.
+* Muitos dados e Baixa Latência.
 
-[!NOTE] Quando Usar?
+> Clientes que usam
+* A própria Amazon.com utiliza.
 
-Muitos dados e Baixa Latência.
+> TradeOff
+* Modelagem dos Dados no DynamoDB bem complexa.
 
-Amazon.com utiliza.
+> Conceitos Basicos
 
-TradeOff
-Modelagem dos Dados no DynamoDB bem complexa.
+* Chave Valor.
+* Tabela composta de duas PK
+* Primary Key vai ser composta por (Partition Key e SortKey)
+* Faça a pesquisa sempre pela chave
+* A partition Key não é opcional na consulta, a Sort Key sim.
+* Inverter a ordem de Partition Key e Sort Key é possível.
 
-Conceitos Basicos
+> EX: Modelagem de um sistema pequeno:
 
-Chave Valor.
-
-Tabela composta de duas PK
-
-Primary Key vai ser composta por (Partition Key e SortKey)
-
--*Faça a pesquisa sempre pela chave
-
-A partition Key não é opcional na consulta, a Sort Key sim.
-
--*Inverter a ordem de Partition Key e Sort Key é possível.
-
-EX: Modelagem de um sistema pequeno:
-
-4 Tabelas no sistema.
+Tabelas no sistema.
 
 ![foo bar](Imagens/Modelagem%20de%20um%20sistema%20pequeno.png "Sistema pequeno")
 
 
 Modelagem: ERD > Padrões de acesso > Design
 
--*Esquecer: Normalização, JOINS e Uma entidade por tabela.
+> Esquecer: Normalização, JOINS e Uma entidade por tabela.
 
 Padrões de Acesso:
--1 Buscar Perfil de um usuário
--2 Buscar pedidos de um usuário.
--3 Buscar um pedido e seus itens.
--4 Buscar pedidos de um usuário pelo status.
+1. Buscar Perfil de um usuário
+2. Buscar pedidos de um usuário.
+3. Buscar um pedido e seus itens.
+4. Buscar pedidos de um usuário pelo status.
 
 
-1 - Buscar perfil de um usuário.
-
-Verificar imagem com o exemplo da tabela.
+ 1 - Buscar perfil de um usuário.
 
 ![foo bar](Imagens/Buscar%20perfil%20de%20um%20usuário.png  "Perfil de Usuário"   )
 
-2- Buscar pedidos de um usuário.
+2 - Buscar pedidos de um usuário.
 
 ![foo bar](Imagens/Buscar%20pedidos%20de%20um%20usuário.png  "Pedido de um Usuário"   )
 
