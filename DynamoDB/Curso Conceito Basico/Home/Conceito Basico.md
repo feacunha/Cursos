@@ -87,9 +87,10 @@ pk='normandesjr' and BEGINS_WITH(sk, '#PROFILE#')
 pk='normandesjr' and BEGINS_WITH(sk, 'ORDER#')
 ```
 
-> É padrão chamar as primary key de (pk) 
-
-> Se for composta, ficaria Primary Key(pk) e Sort Key (sk)
+>[!IMPORTANT]
+>
+>É padrão chamar as primary key de (pk) <br>
+>Se for composta, ficaria Primary Key(pk) e Sort Key (sk) 
 
 > Por que?
 
@@ -101,19 +102,18 @@ pk='normandesjr' and BEGINS_WITH(sk, 'ORDER#')
 
 ![foo bar](Imagens/Buscar%20um%20pedido%20e%20seus%20itens.png  "Pedido e os Itens"   )
 
-
-
 > Como fazer essa consulta?
 
-> (pk) só pode usar (=)
-
+>[!IMPORTANT]
+>
+> (pk) só pode usar (=)<br>
 > (sk) podemos usar (>, <, =)
 
 * Inverter as colunas (pk) e (sk)
 
-> Usando um index secundário global conseguimos inverter as colunas da (pk)
-
-
+>[!TIP]
+>
+>Usando um index secundário global conseguimos inverter as colunas da (pk).
 
 ```sql
 sk='ORDER#5eaf12' and BEGINS_WITH(pk, 'ITEM#')
