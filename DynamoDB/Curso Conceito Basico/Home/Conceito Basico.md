@@ -57,8 +57,7 @@ Referência:
 
 >[!TIP]
 >
-> Modelagem: ERD > Padrões de acesso > Design
-<br>
+> Modelagem: ERD > Padrões de acesso > Design<br>
 > Esquecer: Normalização, JOINS e Uma entidade por tabela.
 
 ### Padrões de Acesso:
