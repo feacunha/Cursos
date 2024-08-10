@@ -8,7 +8,7 @@ Referência:
 
 ----
 
-# DinamoDB - Not only SQL (NOSQL)
+# DynamoDB - Not only SQL (NOSQL)
 
 
 * Tabelas como em outros banco de dados
@@ -39,7 +39,7 @@ Referência:
 > TradeOff
 * Modelagem dos Dados no DynamoDB bem complexa.
 
-> Conceitos Basicos
+### Conceitos Basicos
 
 * Chave Valor.
 * Tabela composta de duas PK
@@ -50,60 +50,70 @@ Referência:
 
 > EX: Modelagem de um sistema pequeno:
 
-Tabelas no sistema.
+### Tabelas no sistema
 
 ![foo bar](Imagens/Modelagem%20de%20um%20sistema%20pequeno.png "Sistema pequeno")
 
 
-Modelagem: ERD > Padrões de acesso > Design
+> Modelagem: ERD > Padrões de acesso > Design
 
 > Esquecer: Normalização, JOINS e Uma entidade por tabela.
 
-Padrões de Acesso:
+### Padrões de Acesso:
 1. Buscar Perfil de um usuário
 2. Buscar pedidos de um usuário.
 3. Buscar um pedido e seus itens.
 4. Buscar pedidos de um usuário pelo status.
 
-
- 1 - Buscar perfil de um usuário.
+----
+#### 1. Buscar perfil de um usuário.
 
 ![foo bar](Imagens/Buscar%20perfil%20de%20um%20usuário.png  "Perfil de Usuário"   )
 
-2 - Buscar pedidos de um usuário.
+> Query para realizar a busca.
+
+```sql
+pk='normandesjr'
+```
+----
+#### 2. Buscar pedidos de um usuário.
 
 ![foo bar](Imagens/Buscar%20pedidos%20de%20um%20usuário.png  "Pedido de um Usuário"   )
 
-Como fazer essa pesquisa?
+> Como fazer essa query?
 
 ```sql
 pk='normandesjr' and BEGINS_WITH(sk, '#PROFILE#')
 pk='normandesjr' and BEGINS_WITH(sk, 'ORDER#')
 ```
 
-É padrão chamar as primary key de (pk) 
-Se for composta, ficaria Primary Key(pk) e Sort Key (sk)
+> É padrão chamar as primary key de (pk) 
 
-Por que?
+> Se for composta, ficaria Primary Key(pk) e Sort Key (sk)
 
-Porque os atributos podem variar na Primary Key e Sort Key, então não faz sentido dar um nome para essa "coluna".
+> Por que?
 
-3 - Buscar um pedido e seus itens.
+> Porque os atributos podem variar na Primary Key e Sort Key, então não faz sentido dar um nome para essa "coluna".
+
+----
+
+#### 3. Buscar um pedido e seus itens.
 
 ![foo bar](Imagens/Buscar%20um%20pedido%20e%20seus%20itens.png  "Pedido e os Itens"   )
 
 
 
-Como fazer essa consulta?
+> Como fazer essa consulta?
 
-(pk) só pode usar (=)
-(sk) podemos usar (>, <, =)
+> (pk) só pode usar (=)
 
--*Inverter as colunas (pk) e (sk)
+> (sk) podemos usar (>, <, =)
 
-Usando um index secundário global conseguimos inverter as colunas da (pk)
+* Inverter as colunas (pk) e (sk)
 
-e montar a query assim:
+> Usando um index secundário global conseguimos inverter as colunas da (pk)
+
+
 
 ```sql
 sk='ORDER#5eaf12' and BEGINS_WITH(pk, 'ITEM#')
