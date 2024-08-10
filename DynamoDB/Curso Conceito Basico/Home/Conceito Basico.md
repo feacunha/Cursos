@@ -55,8 +55,10 @@ Referência:
 ![foo bar](Imagens/Modelagem%20de%20um%20sistema%20pequeno.png "Sistema pequeno")
 
 
+>[!TIP]
+>
 > Modelagem: ERD > Padrões de acesso > Design
-
+<br>
 > Esquecer: Normalização, JOINS e Uma entidade por tabela.
 
 ### Padrões de Acesso:
@@ -92,8 +94,12 @@ pk='normandesjr' and BEGINS_WITH(sk, 'ORDER#')
 >É padrão chamar as primary key de (pk) <br>
 >Se for composta, ficaria Primary Key(pk) e Sort Key (sk) 
 
-> Por que?
+>[!NOTE]
+>
+>Por que?
 
+>[!TIP]
+>
 > Porque os atributos podem variar na Primary Key e Sort Key, então não faz sentido dar um nome para essa "coluna".
 
 ----
@@ -102,7 +108,12 @@ pk='normandesjr' and BEGINS_WITH(sk, 'ORDER#')
 
 ![foo bar](Imagens/Buscar%20um%20pedido%20e%20seus%20itens.png  "Pedido e os Itens"   )
 
-> Como fazer essa consulta?
+
+>[!NOTE]
+>
+>Como fazer essa consulta?
+
+
 
 >[!IMPORTANT]
 >

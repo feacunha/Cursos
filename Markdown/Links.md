@@ -19,3 +19,6 @@ https://experienceleague.adobe.com/pt-br/docs/contributor/contributor-guide/writ
 <br>
 [Link de um artigo para outro](
 https://experienceleague.adobe.com/pt-br/docs/contributor/contributor-guide/writing-essentials/linking)
+<br>
+[Introdução à escrita e formatação no GitHub](
+https://docs.github.com/pt/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github)
