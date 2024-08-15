@@ -25,13 +25,20 @@
 ----
 <br>
 
+>[!NOTE]
+>
 > Quando Usar?
 * Muitos dados e Baixa Latência.
 
+>[!NOTE]
+>
 > Clientes que usam
 * A própria Amazon.com utiliza.
 
+>[!NOTE]
+>
 > TradeOff
+
 * Modelagem dos Dados no DynamoDB bem complexa.
 
 ### Conceitos Basicos
