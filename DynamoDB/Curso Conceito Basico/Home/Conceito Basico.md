@@ -49,7 +49,7 @@
 * Integrado ao ````CloudTrail```` - todas as chamadas de API são registradas como eventos.
 * ````Global Tables```` permite a utilização de multiplas regiões e ````multi-master database````
 * DynamoDB Stream camptura eventos da tabela ````Lambda pode executar ações````.
-*````DAX (DynamoDB Accelerator)```` - Cache em memória, resposta em microssegundos.
+* ````DAX (DynamoDB Accelerator)```` - Cache em memória, resposta em microssegundos.
 * Database 100% gerenciado.
 * Uma tabela por dominio.
 * Distribuido Globalmente
