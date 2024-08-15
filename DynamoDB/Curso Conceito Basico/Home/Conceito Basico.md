@@ -1,9 +1,4 @@
 
-Referência: 
-<br>
-[DynamoDB](https://www.youtube.com/watch?v=kSnpuKr3Ajw  "DynamoDB"   )
-<br>
-[Como modelar com DynamoDB](https://www.youtube.com/watch?v=bTLoK2eHwi4  "Como modelar com DynamoDB"   )
 
 
 ----
@@ -42,12 +37,33 @@ Referência:
 ### Conceitos Basicos
 
 * Chave Valor.
+* Database 100% gerenciado.
+* Uma tabela por dominio.
+* Distribuido Globalmente
+* Ideal para Micro Serviços.
+* Não faz ````JOIN````
+* Dor de cabeça para alterar a estrutura da tabela.
 * Tabela composta de duas PK
 * Primary Key vai ser composta por (Partition Key e SortKey)
 * Faça a pesquisa sempre pela chave
 * A partition Key não é opcional na consulta, a Sort Key sim.
 * Inverter a ordem de Partition Key e Sort Key é possível.
+* Padrões de nomes das colunas ````pk```` para ````Partition Key```` e ````sk```` para ````Sort Key ````.
+* Na ````pk```` só conseguimos utilizar ````=````, na ````sk```` que conseguimos usar ``` BEGINS_WITH ```
+* A pesquisa sempre será feita pela chave.
 
+### Exemplos de tabelas
+
+- Só com uma ````pk Partition Key```` 
+
+![foo bar](Imagens/Exemplo%20de%20Tabela%20no%20DynamoDB.png)
+
+- Composta  ````pk Partition Key e sk Sort Key```` 
+
+![foo bar](Imagens/Exemplo%20de%20Tabela%20no%20DynamoDB%20Chave%20Composta.png)
+
+>[!TIP]
+>
 > EX: Modelagem de um sistema pequeno:
 
 ### Tabelas no sistema
@@ -64,7 +80,8 @@ Referência:
 1. Buscar Perfil de um usuário
 2. Buscar pedidos de um usuário.
 3. Buscar um pedido e seus itens.
-4. Buscar pedidos de um usuário pelo status.
+4. Buscar pedidos de um usuário pelo status 
+
 
 ----
 #### 1. Buscar perfil de um usuário.
@@ -116,16 +133,59 @@ pk='normandesjr' and BEGINS_WITH(sk, 'ORDER#')
 
 >[!IMPORTANT]
 >
-> (pk) só pode usar (=)<br>
-> (sk) podemos usar (>, <, =)
+> ````pk```` só pode usar ````=````<br>
+> ````sk```` podemos usar ````>, <, =````
 
 * Inverter as colunas (pk) e (sk)
 
 >[!TIP]
 >
->Usando um index secundário global conseguimos inverter as colunas da (pk).
+>Usando um index secundário global ````"GSI"```` conseguimos inverter as colunas da ````pk```` e trazer uma coluna não chave.
 
 ```sql
 sk='ORDER#5eaf12' and BEGINS_WITH(pk, 'ITEM#')
 ```
 
+----
+
+#### 4. Buscar pedidos de um usuário pelo status.
+
+![foo bar](Imagens/Buscar%20Pedidos%20de%20um%20usuari%20pelo%20status.png)
+
+* Criamos um novo index GSI
+
+```sql
+pk = 'USER#normandesjr' and BEGINS_WITH(status, 'PLACED#')
+```
+
+>[!NOTE]
+>
+> Podemos criar no máximo ````20```` índices ````GSI's```` por tabela.
+> Muitos índices são bem complicados de se manter.
+> 
+>Os Índices ````GSI```` vão ter um tempo de ````(ms) milisegundos````de latência.
+>
+> É possivel ter a consulta fortemente consistente, porém será pago o preço por isso e não é barato.
+
+<br>
+
+----
+<br>
+
+Referência: 
+<br>
+[What is DynamoDB?](https://www.dynamodbguide.com/what-is-dynamo-db/)
+<br>
+[DynamoDB](https://www.youtube.com/watch?v=kSnpuKr3Ajw  "DynamoDB"   )
+<br>
+[Como modelar com DynamoDB](https://www.youtube.com/watch?v=bTLoK2eHwi4  "Como modelar com DynamoDB"   )
+<br>
+[What is Amazon DynamoDB?](https://docs.aws.amazon.com/pt_br/amazondynamodb/latest/developerguide/Introduction.html)
+<br>
+[Docker AWSCLI V1](https://github.com/normandesjr/awscliv1)
+<br>
+[Overloading Global Secondary Indexes](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/bp-gsi-overloading.html)
+<br>
+[Take advantage of sparse indexes](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/bp-indexes-general-sparse-indexes.html)
+
+----
