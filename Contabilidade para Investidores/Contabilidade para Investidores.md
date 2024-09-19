@@ -113,7 +113,6 @@
 <br>
 
 ----
-----
 
 <br>
 
@@ -124,6 +123,7 @@
 > - Relatórios: Como divulgar?
 > - Registro contábil e Notas Explicativas
 
+<br>
 
 ----
 ----
@@ -134,7 +134,6 @@
 
 <br>
 
-----
 ----
 
 <br>
@@ -161,7 +160,6 @@
 
 <br>
 
-----
 ----
 
 <br>
