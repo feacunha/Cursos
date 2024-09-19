@@ -25,18 +25,31 @@
 ----
 <br>
 
+>[!NOTE]
+>
 > Quando Usar?
 * Muitos dados e Baixa Latência.
 
+>[!NOTE]
+>
 > Clientes que usam
 * A própria Amazon.com utiliza.
 
+>[!NOTE]
+>
 > TradeOff
+
 * Modelagem dos Dados no DynamoDB bem complexa.
 
 ### Conceitos Basicos
 
 * Chave Valor.
+* Backup e Restore em função do tempo (point in time)
+*```` Multi-AZ````, alta disponibilidade e durabilidade por padrão.
+* Integrado ao ````CloudTrail```` - todas as chamadas de API são registradas como eventos.
+* ````Global Tables```` permite a utilização de multiplas regiões e ````multi-master database````
+* DynamoDB Stream camptura eventos da tabela ````Lambda pode executar ações````.
+* ````DAX (DynamoDB Accelerator)```` - Cache em memória, resposta em microssegundos.
 * Database 100% gerenciado.
 * Uma tabela por dominio.
 * Distribuido Globalmente
@@ -176,9 +189,9 @@ Referência:
 <br>
 [What is DynamoDB?](https://www.dynamodbguide.com/what-is-dynamo-db/)
 <br>
-[DynamoDB](https://www.youtube.com/watch?v=kSnpuKr3Ajw  "DynamoDB"   )
+[Como modelar com DynamoDB | ⚡ Zup Insights ](https://www.youtube.com/watch?v=kSnpuKr3Ajw  "DynamoDB"   )
 <br>
-[Como modelar com DynamoDB](https://www.youtube.com/watch?v=bTLoK2eHwi4  "Como modelar com DynamoDB"   )
+[DynamoDB - Webfor Treinamentos](https://www.youtube.com/watch?v=bTLoK2eHwi4  "Como modelar com DynamoDB"   )
 <br>
 [What is Amazon DynamoDB?](https://docs.aws.amazon.com/pt_br/amazondynamodb/latest/developerguide/Introduction.html)
 <br>
@@ -187,5 +200,8 @@ Referência:
 [Overloading Global Secondary Indexes](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/bp-gsi-overloading.html)
 <br>
 [Take advantage of sparse indexes](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/bp-indexes-general-sparse-indexes.html)
+<br>
+[Conceitos básicos sobre DynamoDB | 📎 Zup Clipes ✂️](https://www.youtube.com/watch?v=9AkzibsIZUk)
+
 
 ----
