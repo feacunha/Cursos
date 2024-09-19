@@ -183,6 +183,44 @@
 
 <br>
 
+
+# Como a empresa gera valor? 
+
+<br>
+
+----
+
+<br>
+
+> [!NOTE]
+>
+> <b>Lucro</b>
+>
+> O que é lucro?
+>
+> - Todo ganho ou vantagem obtida em uma transação.
+>
+> Todo lucro é igual? Não!
+>
+> - Lucro econômico x Lucro contábil
+>
+>Lucro contábil é a diferença simples entre os retornos e os custos das transações realizadas pela entidade.
+
+
+
+
+
+
+
+
+<br>
+
+----
+----
+----
+
+<br>
+
 * DRE: Apuração de resultado.
 
 
