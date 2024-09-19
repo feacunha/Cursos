@@ -165,9 +165,6 @@
 >
 > - Contabilidade Financeira: voltada para a produção dos relatórios contábeis fornecidos aos usuários externos
 
-
-
-
 <br>
 
 ----
@@ -175,7 +172,6 @@
 ----
 
 <br>
-
 
 # Como a empresa gera valor? 
 
@@ -200,10 +196,33 @@
 >Lucro contábil é a diferença simples entre os retornos e os custos das transações realizadas pela entidade.
 
 
+<br>
 
+----
 
+<br>
 
+### Lucro Econômico
 
+<br>
+
+----
+
+<br>
+
+>[!NOTE]
+>
+> - Um elemento do lucro que não é considerado quando falamos de apuração de resultado é o ganho econômico
+>
+> - Ganho econômico: resultado positivo de uma transação após descontar o custo de oportunidade
+>
+> Custo de oportunidade: Custo da segunda melhor opção
+>
+> - Decisão entre investir em renda fixa e renda variável
+> - Decisão entre viajar e investir
+> - É o custo daquilo que você não escolheu como opção"
+
+<br>
 
 
 <br>
