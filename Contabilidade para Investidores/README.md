@@ -1,10 +1,3 @@
-
-----
-----
-----
-
-<br>
-
 # Introdução a Contabilidade:
 
 <br>
